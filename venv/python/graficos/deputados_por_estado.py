@@ -27,7 +27,6 @@ fig = px.bar(df.groupby(['siglaUf']).count().reset_index(),
                  'siglaUf': '',
                  'id': ''
                  })
-print('Update do gráfico')
 
 print('Conversão do gráfico para HTML')
 
