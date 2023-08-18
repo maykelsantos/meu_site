@@ -96,22 +96,25 @@ ul li a:hover {
 }
 
 #analise-futebol-pbix {
-    justify-content: center;
-    text-align: center;
-    padding: 24px 0;
-    font-size: 24px;
-    padding: 16px 24px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    margin: 20px;
-}
-
-#titulo-grafico {
     margin: 20px;
 }
 
 #analise-futebol-pbix img {
     display: flex;
     width: 100%;
+    border-radius: 10px;
+}
+
+#analise_futebol_titulo_1 {
+    font-weight: 800;
+    padding: 20px;
+}
+
+#analise_futebol_titulo_2 {
+    font-weight: 800;
+    padding: 20px;
+}
+
+p {
+    padding: 40px;
 }
