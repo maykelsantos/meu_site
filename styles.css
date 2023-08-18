@@ -67,6 +67,13 @@ ul li a:hover {
     transition: all 0.2s;
 }
 
+#curriculo {
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 #social-links {
     display: flex;
     justify-content: center;
