@@ -18,6 +18,8 @@ body * {
     color: white;
 }
 
+/* SCRIPTS DA PÁGINA INDEX.HTML */
+
 #container {
     width: 360px;
     margin: auto;
@@ -95,6 +97,8 @@ ul li a:hover {
     transition: all 0.2s;
 }
 
+/* SCRIPTS DA PÁGINA ANALISE_FUTEBOL.HTML */
+
 #analise-futebol-pbix {
     margin: 20px;
 }
@@ -105,17 +109,19 @@ ul li a:hover {
     border-radius: 10px;
 }
 
-#analise_futebol_titulo_1 {
+#analise_futebol_titulo {
     font-weight: 800;
     padding: 20px;
 }
 
-#analise_futebol_titulo_2 {
-    font-weight: 800;
-    padding: 20px;
-}
-
-#analise_futebol_paragrafo_1 {
+#analise_futebol_paragrafo {
     padding: 40px;
     text-align: justify;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 20px;
 }
