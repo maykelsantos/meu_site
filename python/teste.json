@@ -1,0 +1,72 @@
+[
+  {
+    "id": { "M49": 4, "ISO-3166-1-ALPHA-2": "AF", "ISO-3166-1-ALPHA-3": "AFG" },
+    "nome": {
+      "abreviado": "Afeganistão",
+      "abreviado-EN": "Afghanistan",
+      "abreviado-ES": "Afganistán"
+    },
+    "area": {
+      "total": "652230",
+      "unidade": {
+        "nome": "quilômetros quadrados",
+        "símbolo": "km2",
+        "multiplicador": 1
+      }
+    },
+    "localizacao": {
+      "regiao": { "id": { "M49": 142 }, "nome": "Ásia" },
+      "sub-regiao": {
+        "id": { "M49": 34 },
+        "nome": "Ásia meridional (Sul da Ásia)"
+      },
+      "regiao-intermediaria": null
+    },
+    "linguas": [
+      { "id": { "ISO-639-1": "fa", "ISO-639-2": "fas" }, "nome": "persa" }
+    ],
+    "governo": { "capital": { "nome": "Cabul" } },
+    "unidades-monetarias": [
+      {
+        "id": { "ISO-4217-ALPHA": "AFN", "ISO-4217-NUMERICO": "971" },
+        "nome": "Afegane"
+      }
+    ],
+    "historico": "A República Islâmica do Afeganistão é um país localizado no centro do continente asiático. No século XVIII, o país é invadido pelos persas. Conquistaria a independência em 1747 graças a Ahmed Shah Durrani, que unificou as tribos pashtuns. Com o fim do Império Durrani, tem início o Emirado do Afeganistão, com o reinado de Dost Mohammad Khan, em 1823. O Afeganistão serviu como amortecedor entre os impérios britânico e russo, até que conquistou a independência do controle britânico em 1919.A União Soviética invadiu o país em 1979 para apoiar o regime comunista, desencadeando uma longa guerra. Em 1989, sob a pressão implacável de rebeldes mujahidin anticomunistas apoiados internacionalmente, a União Soviética sai do território afegão. Uma série de guerras civis subsequentes faz com que a cidade de Cabul caia nas mãos do grupo fundamentalista islâmico Talibã, em 1996. Uma conferência em Bonn, Alemanha, patrocinada pela ONU em 2001, estabeleceu um processo de reconstrução política que incluiu a adoção de uma nova constituição e a eleição presidencial em 2004. Em dezembro de 2004, Hamid Karzai se tornou o primeiro presidente democraticamente eleito do Afeganistão, sendo reeleito em agosto de 2009 para o segundo mandato. Novas eleições ocorreram em 2014, resultando num impasse. Ashraf Ghani e Abdullah eram os dois adversários que concorriam à sucessão do presidente Hamid Karzai. Ghani foi o vencedor no segundo turno, mas Abdullah denunciou fraude, o que provocou um processo de revisão eleitoral. Por conta disso, ambos assinaram um acordo de governo, em setembro de 2014, no qual ficou instituído que o presidente seria Ghani e Abdullah ocuparia um cargo executivo similar ao de primeiro-ministro. Fontes: https://www.infoplease.com/encyclopedia/places/asia/afghanistan-political-geography/afghanistan/history https://www.cia.gov/library/publications/the-world-factbook/geos/af.html"
+  },
+  {
+    "id": { "M49": 4, "ISO-3166-1-ALPHA-2": "AF", "ISO-3166-1-ALPHA-3": "AFG" },
+    "nome": {
+      "abreviado": "Afeganistão",
+      "abreviado-EN": "Afghanistan",
+      "abreviado-ES": "Afganistán"
+    },
+    "area": {
+      "total": "652230",
+      "unidade": {
+        "nome": "quilômetros quadrados",
+        "símbolo": "km2",
+        "multiplicador": 1
+      }
+    },
+    "localizacao": {
+      "regiao": { "id": { "M49": 142 }, "nome": "Ásia" },
+      "sub-regiao": {
+        "id": { "M49": 34 },
+        "nome": "Ásia meridional (Sul da Ásia)"
+      },
+      "regiao-intermediaria": null
+    },
+    "linguas": [
+      { "id": { "ISO-639-1": "ps", "ISO-639-2": "pus" }, "nome": "pachto" }
+    ],
+    "governo": { "capital": { "nome": "Cabul" } },
+    "unidades-monetarias": [
+      {
+        "id": { "ISO-4217-ALPHA": "AFN", "ISO-4217-NUMERICO": "971" },
+        "nome": "Afegane"
+      }
+    ],
+    "historico": "A República Islâmica do Afeganistão é um país localizado no centro do continente asiático. No século XVIII, o país é invadido pelos persas. Conquistaria a independência em 1747 graças a Ahmed Shah Durrani, que unificou as tribos pashtuns. Com o fim do Império Durrani, tem início o Emirado do Afeganistão, com o reinado de Dost Mohammad Khan, em 1823. O Afeganistão serviu como amortecedor entre os impérios britânico e russo, até que conquistou a independência do controle britânico em 1919.A União Soviética invadiu o país em 1979 para apoiar o regime comunista, desencadeando uma longa guerra. Em 1989, sob a pressão implacável de rebeldes mujahidin anticomunistas apoiados internacionalmente, a União Soviética sai do território afegão. Uma série de guerras civis subsequentes faz com que a cidade de Cabul caia nas mãos do grupo fundamentalista islâmico Talibã, em 1996. Uma conferência em Bonn, Alemanha, patrocinada pela ONU em 2001, estabeleceu um processo de reconstrução política que incluiu a adoção de uma nova constituição e a eleição presidencial em 2004. Em dezembro de 2004, Hamid Karzai se tornou o primeiro presidente democraticamente eleito do Afeganistão, sendo reeleito em agosto de 2009 para o segundo mandato. Novas eleições ocorreram em 2014, resultando num impasse. Ashraf Ghani e Abdullah eram os dois adversários que concorriam à sucessão do presidente Hamid Karzai. Ghani foi o vencedor no segundo turno, mas Abdullah denunciou fraude, o que provocou um processo de revisão eleitoral. Por conta disso, ambos assinaram um acordo de governo, em setembro de 2014, no qual ficou instituído que o presidente seria Ghani e Abdullah ocuparia um cargo executivo similar ao de primeiro-ministro. Fontes: https://www.infoplease.com/encyclopedia/places/asia/afghanistan-political-geography/afghanistan/history https://www.cia.gov/library/publications/the-world-factbook/geos/af.html"
+  }
+]
