@@ -97,6 +97,24 @@ ul li a:hover {
     transition: all 0.2s;
 }
 
+#video_yt {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#video_yt iframe{
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#video_yt iframe:hover{
+    border-radius: 20px;
+    transition: all 0.5s;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 /* SCRIPTS DA PÁGINA ANALISE_FUTEBOL.HTML */
 
 #analise-futebol-pbix {
