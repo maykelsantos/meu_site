@@ -1,0 +1,155 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### **Importando Bibliotecas Necessárias para o Desenvolvimento**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import os\n",
+    "import heapq\n",
+    "import tempfile"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Função Para Mesclar os Arquivos"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def merge_sorted_files(input_files, output_file):\n",
+    "    with open(output_file, 'wb') as output:\n",
+    "        # Abre os arquivos de entrada e cria iteradores para cada um\n",
+    "        iterators = [iter(open(file, 'rb')) for file in input_files]\n",
+    "\n",
+    "        # Cria uma heap (fila de prioridade) para armazenar as linhas atuais de cada arquivo\n",
+    "        heap = [(next(iterator), iterator) for iterator in iterators]\n",
+    "\n",
+    "        # Converte a heap em uma heap mínima\n",
+    "        heapq.heapify(heap)\n",
+    "\n",
+    "        # Mescla os arquivos\n",
+    "        while heap:\n",
+    "            # Pega o menor elemento da heap\n",
+    "            line, iterator = heapq.heappop(heap)\n",
+    "\n",
+    "            # Escreve a linha no arquivo de saída\n",
+    "            output.write(line)\n",
+    "\n",
+    "            # Obtém a próxima linha do mesmo arquivo\n",
+    "            next_line = next(iterator, None)\n",
+    "\n",
+    "            # Se o arquivo não estiver vazio, adicione a próxima linha à heap\n",
+    "            if next_line is not None:\n",
+    "                heapq.heappush(heap, (next_line, iterator))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Função Principal de Merge Sort Externo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def external_merge_sort(input_file, output_file, chunk_size, max_memory):\n",
+    "    # Divide o arquivo de entrada em pedaços menores\n",
+    "    chunks = []\n",
+    "    with open(input_file, 'rb') as f:\n",
+    "        chunk = []\n",
+    "        current_chunk_size = 0\n",
+    "        for line in f:\n",
+    "            chunk.append(line)\n",
+    "            current_chunk_size += len(line)\n",
+    "\n",
+    "            # Se o tamanho atual do chunk exceder o limite, salva o chunk em um arquivo temporário\n",
+    "            if current_chunk_size >= chunk_size:\n",
+    "                temp_file = tempfile.NamedTemporaryFile(delete=False, mode='wb')\n",
+    "                temp_file.write(b''.join(chunk))\n",
+    "                temp_file.close()\n",
+    "                chunks.append(temp_file.name)\n",
+    "\n",
+    "                # Reinicia o chunk e o tamanho atual\n",
+    "                chunk = []\n",
+    "                current_chunk_size = 0\n",
+    "\n",
+    "    # Ordena cada chunk individualmente\n",
+    "    for chunk_file in chunks:\n",
+    "        lines = open(chunk_file, 'rb').readlines()\n",
+    "        lines.sort()\n",
+    "        with open(chunk_file, 'wb') as f:\n",
+    "            f.writelines(lines)\n",
+    "\n",
+    "    # Realiza a intercalação externa dos chunks\n",
+    "    merge_sorted_files(chunks, output_file)\n",
+    "\n",
+    "    # Limpa os arquivos temporários\n",
+    "    for chunk_file in chunks:\n",
+    "        os.remove(chunk_file)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Configurações e Chamada da Função Principal"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if __name__ == \"__main__\":\n",
+    "    input_file = \"../python/1m.txt\"\n",
+    "    output_file = \"../python/UUIDs_ordenadas.txt\"\n",
+    "    chunk_size = 5 * 1024 * 1024  # 5 MB\n",
+    "    max_memory = 100 * 1024 * 1024  # 100 MB\n",
+    "\n",
+    "    # Chama a função principal\n",
+    "    external_merge_sort(input_file, output_file, chunk_size, max_memory)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "base",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
